@@ -74,6 +74,7 @@ module.exports = {
         plugins.js,
         new BundleAnalyzerPlugin(),
         
+/*
         new HtmlCriticalPlugin({
             base: path.join(path.resolve(__dirname), '../dist/'),
             src: 'index.html',
@@ -87,6 +88,7 @@ module.exports = {
                 blockJSRequests: false,
             }
         })
+*/
 
     ]),
 	
