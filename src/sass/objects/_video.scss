@@ -1,0 +1,20 @@
+.o-video {
+    max-width: 1100px;
+
+    &__item {
+        @extend %rel;
+        max-width: 100%;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        padding-top: 0;
+        height: auto;
+        
+        iframe {
+            @extend %abs;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

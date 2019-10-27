@@ -1,0 +1,23 @@
+.o-lead {
+	&--big {
+		@extend %lead-big;
+	}
+	
+	&--medium {
+		@extend %lead-medium;
+	}
+	
+	&--small {
+		@extend %lead-small;
+	}
+	
+	&--mini {
+		text-transform: lowercase;
+		letter-spacing: .5px;
+		font: {
+			family: $novecento;
+			size: rem(16);
+			weight: $medium;
+		}
+	}
+}

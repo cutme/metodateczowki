@@ -1,0 +1,141 @@
+.c-opinions {
+	
+	&__carousel {
+		width: grid(970, $base - 200);
+		
+		@media ( min-width: $tablet + 1px ) {
+			width: grid(800, $base - 200);
+		}
+		
+		@media ( max-width: $tablet + px ) {
+			width: 100%;
+		}
+	}
+	
+	&__item {
+		@media ( min-width: $smartphone_portrait + 1px ) {
+			display: flex;
+		}
+
+		.author {
+			width: 200px;
+			font: {
+				family: $editorial;
+				weight: $regular;
+			}
+			color: $c-violet-02;
+			
+			@media ( max-width: $smartphone_portrait + px ) {
+				margin-bottom: 10px;
+			}
+		}
+		
+		.opinion {
+			white-space: normal;
+			
+			@media ( min-width: $smartphone_portrait + 1px ) {
+				width: grid(600, 800);
+			}
+			
+			@media ( min-width: $tablet + 1px ) {
+				padding-right: 100px;
+			}
+		}
+	}
+	
+	&__pagination {
+		@extend %flex;
+		padding-top: 50px;
+
+		span {
+			@extend %rel;
+			width: 50%;
+			display: block;
+			height: 30px;
+			text-align: center;
+			font: {
+				family: $novecento;
+				weight: $regular;
+			}
+			
+			&:first-of-type {
+				border-right: 1px solid $c-gray-03;
+				color: $c-violet-01;
+			}
+			
+			&:last-of-type {
+				color: $c-gray-03;
+			}
+		}
+	}
+	
+	&__wrapper {
+		@extend %rel;
+		
+		@media ( min-width: $smartphone_portrait + 1px ) {
+			display: flex;
+			padding-left: grid(200);
+		}
+	}
+	
+	.glide {
+		&__arrows {
+			@extend %flex;
+			@extend %flex-column;
+			@extend %rel;
+		    justify-content: flex-end;
+		    
+		    height: 70px;
+		    
+		    @media ( min-width: $tablet + 1px ) {
+		    	position: absolute;
+			    top: 0;
+			    right: 0;
+			    
+			    transform: translateX(100%);
+		    }
+		    
+		    @media ( min-width: $smartphone_portrait + 1px ) {
+			    width: 170px; height: 120px;
+			}
+			
+			@media ( max-width: $smartphone_portrait + 1px ) {
+			    //width: 200px;
+			}			
+		}
+
+		&__arrow {
+			@extend %abs;
+			top: 0;
+			width: 50%;
+			padding: 0;
+			font-size: rem(24);
+			color: $c-violet-01;
+			
+			@media ( max-width: $smartphone_portrait + px ) {
+				top: 10px;
+			}
+			
+			&--left {
+				left: 0;
+				text-align: left;
+			}
+			
+			&--right {
+				right: 0;
+				text-align: right;
+			}
+		}
+	}
+	
+	.o-section {
+		@media ( min-width: $tablet + px ) {
+			padding-bottom: 220px;
+		}
+	}
+	
+	.o-wrap {
+		@extend %rel;
+		min-height: 140px;
+	}
+}

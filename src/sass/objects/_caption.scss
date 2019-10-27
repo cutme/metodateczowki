@@ -1,0 +1,47 @@
+.o-caption {
+	
+	&--vertical {
+		
+		@media ( min-width: $smartphone_portrait + 1px ) {
+			position: absolute;
+			left: 0; top: 0; bottom: 0;
+		    transform: scale(-1);
+			writing-mode: vertical-rl;
+			white-space: nowrap;
+			text-align: right;
+		}
+	}
+	
+	&--small {
+		letter-spacing: 1px;
+		text-transform: lowercase;
+		font: {
+			family: $novecento;
+			weight: $regular;
+		}
+		color: $c-violet-02;
+		
+		@media ( max-width: $smartphone_portrait + px ) {
+			padding-top: 4px;
+			font-size: rem(12);
+		}
+	}
+	
+	&--bottom {
+		padding: 15px 0 0 0;
+		line-height: 1.7em;
+		font-size: rem(14);
+		color: rgba($c-gray-01, .6);
+		
+		@media ( min-width: $smartphone_portrait + px ) {
+			padding: 35px 40% 0 0;
+		}
+	}
+	
+	&.o-lead--big {
+
+		@media ( max-width: $smartphone_portrait + px ) {
+			margin-bottom: 40px;
+		}
+	}
+}

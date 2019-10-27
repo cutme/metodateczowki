@@ -1,0 +1,55 @@
+.c-foryou {
+	.o-header {
+		margin-bottom: 40px;
+		
+		@media ( min-width: $tablet + 1px ) {
+			max-width: 340px;
+		}
+		
+		@media ( min-width: $smartphone + 1px ) and ( max-width: $tablet + px ) {
+			padding-right: 300px;
+		}
+	}
+	
+	.o-cols {
+		&__item {
+			&:first-of-type {
+				@media ( min-width: $tablet + 1px ) {
+					width: grid(540);
+				}
+			}
+			
+			&:last-of-type {
+				@extend %rel;
+
+				@media ( min-width: $tablet + 1px ) {
+					width: grid(630);
+				}
+				
+				@media (min-width: $smartphone + 1px) and ( max-width: $tablet + px ) {
+					padding-right: 200px;
+					//margin: 0 auto;
+				}
+				
+				@media ( max-width: $tablet + px ) {
+					padding-left: 64px;
+				}
+			}
+		}
+	}
+	
+	.shape {
+		margin-left: 90px;
+		
+		@media ( max-width: $tablet + px ) {
+		    position: absolute;
+		    transform: rotate(90deg) scale3d(1,-1,1);
+		    right: 0;
+		    top: 200px;
+		}
+		
+		@media ( max-width: $smartphone + px ) {
+			display: none;
+		}
+	}
+}

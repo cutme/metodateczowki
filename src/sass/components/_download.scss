@@ -1,0 +1,79 @@
+.c-download {
+/*
+	background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(174,158,205,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(42%, rgba(255,255,255,1)), color-stop(100%, rgba(174,158,205,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(174,158,205,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(174,158,205,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(174,158,205,1) 100%);
+*/
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(174,158,205,1) 100%);
+//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ae9ecd', GradientType=0 );
+
+
+	&:before {
+		@extend %abs;
+		@extend %abs-after;
+		left: 50%;
+		top: 0;
+		transform: translate3d(-50%, -50%, 0);
+		width: 250px; height: 237px;
+		background: {
+			image: url(../img/assets/shapes/arrow-05.svg);
+			repeat: no-repeat;
+		}
+	}
+	
+	
+	.o-header {
+		max-width: 260px;
+		margin-bottom: 60px;
+	}
+
+	.o-cols {
+		&__item {
+			&:first-of-type {
+				
+				@media ( min-width: $tablet + 1px ) {
+					width: grid(370);
+				}
+				
+				@media ( max-width: $tablet + px ) {
+					margin-bottom: 60px;
+				}
+				
+				@media ( min-width: $smartphone_portrait + 1px ) {
+					padding-right: 60px;
+				}
+			}
+			
+			&:last-of-type {
+				@extend %flex;
+				margin: 0 0 0 auto;
+				padding-bottom: 10px;
+				
+				@media ( min-width: $tablet + 1px ) {
+					width: grid(768);
+				}
+			}
+		}
+		
+		.o-header {
+			margin-bottom: 40px;
+		}
+	}
+	
+	.o-btn {
+		width: 168px;
+	}
+	
+	.form-group {
+		&.button {
+			flex: 168px 0 0;
+		}
+	}
+	
+	.form-row {
+		align-items: flex-end;
+	}
+}

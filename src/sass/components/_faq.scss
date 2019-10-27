@@ -1,0 +1,113 @@
+.c-faq {
+	@extend %rel;
+	background: {
+		image: url(../img/assets/shapes/circles-02.svg);
+		repeat: no-repeat;
+		position: center 90px;
+	}
+		
+	.o-article {
+		
+		@media ( min-width: $smartphone + 1px ) {
+			padding-left: 60px;
+		}
+		
+		p {
+			margin-bottom: 2.8em;
+		}
+	}
+	
+	.o-cols {
+		&__item {
+			@extend %rel;
+
+			&:first-of-type {
+				padding-left: 200px;
+				
+				@media ( min-width: $tablet + 1px ) {
+					width: grid(570);
+				}
+				
+				@media ( max-width: $smartphone_portrait + px ) {
+					padding-left: 64px;					
+				}
+			}
+			
+			&:last-of-type {				
+				padding-top: 90px;
+				
+				@media ( min-width: $tablet + 1px ) {
+					width: grid(420);
+					margin: 0 0 0 auto;
+					padding-top: 320px;
+				}
+				
+				@media ( min-width: $tablet + 1px ) and ( max-width: $tablet + px ) {
+					padding-left: 140px;
+				}
+			}
+		}
+	}
+	
+	.o-lead {
+		&--medium {
+			margin-bottom: .8em;
+		}
+	}
+	
+	.o-picture {
+		margin-bottom: 60px;
+		
+		@media ( min-width: $smartphone + 1px ) {
+			padding-left: 60px;
+		}
+	}
+	
+	&__answer {
+		padding: 0;
+		opacity: 0; height: 0; padding: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transform-origin: 50% 0;
+        transform: scale(0);
+        transition: all 0.25s cubic-bezier(.5, 0, 0, 1.25), opacity 0.15s ease-out;
+	}
+	
+	&__item {
+		cursor: pointer;
+		
+		&:before {
+			transition: background-color 250ms;
+		}
+
+		&.is-visible {
+			
+			&:before {
+				background-color: $c-gray-03;
+				font-size: .6px;
+				content: "\e908";
+			}
+			
+			.c-faq__answer {
+				height: auto; 
+				padding: 25px 0;				
+				opacity: .6;
+	            pointer-events: auto;
+	            transform: scale(1) translateY(0);				
+			}
+		}
+		
+		&:hover {
+			&:before {
+				background-color: $c-black-01;
+			}
+		}
+	}
+	
+	&__question {
+		p {
+			@extend %lead-small;
+		}
+	}
+	
+}

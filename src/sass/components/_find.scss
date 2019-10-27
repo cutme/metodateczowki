@@ -1,0 +1,240 @@
+.c-find {
+	background-color: $c-violet-01;
+
+	figcaption {
+		max-width: 370px;
+		font: {
+			family: $editorial;
+			weight: $regular;
+		}
+		
+		@media ( max-width: $tablet_portrait + px ) {
+			padding-left: 10px;
+			padding-top: 40px;
+		}
+
+		p {
+			@extend %lead-medium;
+			text-align: left;
+			
+			@media ( max-width: $tablet + px ) {
+				font-size: rem(24);
+			}
+		}
+		
+		span {
+			display: inline-block;
+			line-height: 1em;
+			font-size: rem(318);
+			
+			@media ( min-width: $tablet_portrait + 1px ) {
+				margin-bottom: -10px;
+			}
+			
+			@media ( max-width: $base + 100px ) {
+				font-size: base(318);
+			}
+		}
+	}
+	
+	figure {
+		@media ( max-width: $tablet_portrait + px ) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	.o-header {
+		max-width: 300px;
+		margin-bottom: 0;
+	}
+
+	.o-cols {	
+		
+		@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+			display: flex;
+		}
+
+		&__item {
+			@extend %rel;
+			margin-bottom: 90px;
+			
+			@media ( max-width: $tablet_portrait + px ) {
+				margin-bottom: 60px;	
+			}
+			
+			@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $tablet + px ) {
+				width: 50%;	
+			}			
+
+			&--2 {
+				figcaption {					
+
+					@media ( min-width: $tablet_portrait + 1px ) {
+						position: absolute;
+						left: -200px; top: -120px;
+						text-align: right;
+					}
+					
+					@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $base + 100px ) {
+						left: base(-200);
+						top: base(-120);
+					}
+					
+					@media ( max-width: $tablet_portrait + px ) {
+						padding-bottom: 40px;
+					}
+				
+					span {
+					    transform: rotate(-11deg);
+					}
+				}
+				
+				figure {
+					@media ( max-width: $tablet_portrait + px ) {
+						flex-direction: column-reverse;
+					}
+				}
+			}
+			
+			&--3 {
+				figcaption {
+					span {
+					    transform: rotate(11deg);
+					}
+				}
+			}
+			
+			&--5 {
+				margin-bottom: 210px;
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					margin-bottom: 100px;
+				}
+			}
+			
+			&--6 {
+				@media ( min-width: $tablet_portrait + 1px ) {
+					margin-bottom: 210px;
+				}
+	
+				figcaption {
+					
+					@media ( min-width: $tablet_portrait + 1px ) {
+						position: absolute;
+						left: 90px; bottom: 0;
+					}
+					
+					@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $base + 100px ) {
+						left: base(90);
+					}
+		
+					span {
+						margin-bottom: 30px;
+					    transform: rotate(-11deg);
+					}
+				}
+			}
+			
+			&--7 {
+								
+				@media ( min-width: $tablet_portrait + 1px ) {
+					width: calc(50% + 90px);
+					margin-bottom: 150px;
+					padding-left: 90px;
+				}				
+	
+				figcaption {
+					
+					@media ( min-width: $tablet_portrait + 1px ) {
+						position: absolute;
+						left: 0; top: -120px;
+					}
+					
+					@media ( min-width: $tablet_portrait + 1px ) and ( max-width: $base + 100px ) {
+						top: base(-120);
+					}
+		
+					span {
+					    transform: rotate(11deg);
+					}
+					
+					@media ( max-width: $tablet_portrait + px ) {
+						padding-bottom: 60px;
+					}
+				}
+				
+				figure {
+					@media ( max-width: $tablet_portrait + px ) {
+						flex-direction: column-reverse;
+					}
+				}
+			}
+			
+			&--8 {
+				margin-bottom: 150px;
+				padding-left: 110px;
+				
+				@media ( min-width: $tablet_portrait + 1px ) {
+					width: calc(50% - 90px);
+				}
+				
+				@media ( max-width: $tablet_portrait + px ) {
+					margin-bottom: 70px;
+					padding-left: 20px;
+				}
+				
+				figcaption {					
+
+					@media ( min-width: $tablet_portrait + 1px ) {
+						position: absolute;
+						left: 110px; bottom: 0;
+					}
+					
+					span {
+					    transform: rotate(-11deg);
+					}
+				}
+				
+			}
+			
+			&--9 {
+				width: 100%;
+				
+				figure {
+					max-width: 768px;
+					margin: 0 auto;
+				}
+				
+				figcaption {
+					margin-bottom: 70px;
+	
+					span {
+						transform: rotate(11deg);
+
+						@media ( min-width: $tablet_portrait + 1px ) {
+							position: absolute;
+							right: 100px;
+						    top: 70px;
+						    
+						}
+					    
+					    /*
+@media ( max-width: $tablet_portrait + px ) {
+						    top: 160px;
+						    right: 20px;
+						}
+*/
+					}
+				}
+				
+			}
+
+			&:last-child {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	
+	
+}

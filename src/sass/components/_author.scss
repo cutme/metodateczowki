@@ -1,0 +1,79 @@
+.c-author {
+	background-color: $c-black-01;
+	padding: 90px 0;
+	color: white;
+	
+	&__details {
+		@media ( min-width: $smartphone_portrait +1px ) and ( max-width: $tablet + px ) {
+			max-width: 368px;
+		}
+	}
+	
+	.o-cols {
+		&__item {
+			
+			&:first-of-type {
+				@extend %rel;
+				width: grid(770);
+				
+				@media ( max-width: $tablet + px ) {
+					width: 100%;
+					margin-bottom: 80px;
+				}
+				
+				@media ( min-width: $smartphone_portrait + 1px ) {
+					padding: 0 80px 0 grid(200);
+				}
+			}
+			
+			&:last-of-type {
+				
+				//@extend %rel;
+				
+				@media ( min-width: $tablet + 1px ) {
+					width: grid(400);
+					padding-left: 30px;
+					margin: 0 0 0 auto;
+				}				
+				
+				@media ( max-width: $tablet + px ) {
+					display: none;
+				}
+			}
+		}
+	}
+	.o-lead {
+		&--medium {
+			margin-bottom: 70px;
+		}
+	}
+
+	.o-section {
+		border: {
+			top: 1px solid $c-violet-02;
+			bottom: 1px solid $c-violet-02;
+		}
+	}
+
+	
+	
+	.c-social {
+		padding: 60px 0;
+		
+		[class^="icon-"] {
+			border: 1px solid $c-gray-03;
+			color: $c-gray-02;
+			
+			&:hover {
+				border-color: white;
+				color: white;
+			}
+		}
+		
+		li {
+			&:last-child {
+				margin: 0 0 0 auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,57 @@
+body {
+	@include antialias;
+	line-height: 1.6;
+	text-rendering: optimizeSpeed;
+	font: {
+		family: $text;
+		size: #{$base-font-size}px;
+		weight: $light;
+	}
+	color: $c-black-01;
+	
+	@media ( max-width: $smartphone + px ) {
+		font-size: rem(18);
+	}
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		font-size: rem(16);
+	}
+
+}
+
+a {
+	color: inherit;
+	cursor: pointer;
+	text-decoration: none;
+	
+	.is-loaded & {
+        @extend %anim;
+    }
+	
+	&:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    font-size: #{$base-font-size}px;
+}
+
+strong {
+    font-weight: $bold;
+}
+
+::selection {
+	background-color: $c-primary;
+	color: white;
+}
+
+
+hr {
+    background-color: $c-gray-01;
+    border-top: 0;
+    height: 1px;
+    margin: 5px 0 40px 0;
+}

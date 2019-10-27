@@ -1,0 +1,79 @@
+.c-footer {
+	@extend %rel;
+	padding: {
+		top: 100px;
+		bottom: 70px;
+	}
+	text-align: center;
+
+	&:before {
+		@extend %abs;
+		@extend %abs-after;
+		top: 0;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		width: 74px; height: 74px;
+		background: {
+			image: url(../img/logo/metodateczowki.svg);
+			repeat: no-repeat;
+			size: contain;
+		}
+	}
+	
+	a {
+		color: $c-violet-01;
+		
+		&:hover {
+			color: $c-black-01;
+		}
+	}
+
+	img {
+		display: inline-block;
+	}
+
+	&__authors {
+		margin-bottom: 50px;
+		font-size: rem(14);
+	}
+
+	&__logo {
+		margin-bottom: 50px;
+	}
+	
+	&__nav {
+		margin-bottom: 50px;
+
+		ul {
+			
+			@media ( min-width: $smartphone + px ) {
+				display: flex;
+				justify-content: center;
+			}
+
+			li {
+				padding: 0 15px;
+				font-size: rem(14);
+				
+				@media ( max-width: $smartphone + px ) {
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+	
+	.c-social {
+		@extend %flex-x;
+		
+		[class^="icon-"] {
+			border: 1px solid $c-gray-02;
+			color: $c-black-01;
+			
+			&:hover {
+				background-color: $c-black-01;
+				border-color: $c-black-01;
+				color: white;
+			}
+		}
+	}
+}

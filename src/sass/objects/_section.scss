@@ -1,0 +1,23 @@
+.o-section {
+    padding: 140px 0 0 0;
+    
+    @media ( max-width: $smartphone + px ) {
+		padding: 70px 0 0 0;    
+	}
+
+    &--both {
+	    padding: 140px 0;
+	    
+	    @media ( max-width: $smartphone + px ) {
+		    padding: 70px 0;
+		}
+    }
+    
+    &--both-half {
+	    padding: 70px 0;
+	    
+	    @media ( max-width: $smartphone + px ) {
+		    padding: 50px 0;
+		}
+    }
+}

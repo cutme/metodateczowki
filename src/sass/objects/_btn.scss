@@ -1,0 +1,49 @@
+.o-btn {
+    @extend %anim;
+    @extend %flex-inline;
+    @extend %flex-xy;
+    @extend %rel;
+    height: 46px;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    padding: 0 30px 2px 30px;
+    letter-spacing: 1px;
+    line-height: 1em;
+    font: {
+	    family: $novecento;
+        size: rem(16);
+        weight: $medium;
+    }
+    text-transform: lowercase;
+    overflow: hidden;
+
+	&--blackoutline {
+		background-color: white;
+		border-color: $c-black-01;
+    }
+    
+    &--greenoutline {
+		border-color: $c-green-01;
+    }
+
+    &--whiteoutline {
+		border-color: white;
+        color: white;
+    }
+    
+    span {
+        width: 100%;
+	}
+}
+
+a.o-btn,
+button.o-btn {
+    .desktop & {
+    
+        &:hover {
+	        background-color: $c-black-01;
+			border-color: $c-black-01;
+			color: white;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.c-cookies {
+    //@extend %flex-y;
+    @extend %flex-spacebetween;
+    @extend %abs;
+    align-items: end;
+    left: 30px; bottom: 0;
+    z-index: 100;
+    transform: translate3d(0, -30px, 0);
+    width: calc(100% - 60px);
+    background-color: white;
+    box-shadow: 0 5px 20px rgba(black, .15);
+    padding: 15px 30px 15px 30px;
+    transition: .5s ease-out;
+    
+    @media ( min-width: $smartphone_portrait + 1px ) {
+	    display: flex;
+    }
+    
+    @media ( max-width: $smartphone_portrait + px ) {
+	    left: 20px;
+	    width: calc(100% - 40px)
+    }
+    
+    img {
+	    align-self: baseline;
+    }
+    
+    & > div {
+	    @extend %flex;
+    }
+
+    &.move-out {
+        transform: translate3d(0, 130%, 0);        
+        opacity: 0;
+    }
+
+    &__accept {
+        @extend %anim;
+        display: inline-block;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+		border-bottom: 1px solid $c-violet-01;
+        white-space: nowrap;
+        font: {
+	        family: $novecento;
+	        weight: $bold;
+	        size: rem(13);
+        }
+        cursor: pointer;    
+        color: $c-violet-01;
+        
+        @media ( min-width: $smartphone_portrait + 1px ) {
+        	display: flex;
+        	justify-content: center;
+			align-items: center;
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+	        margin-left: 34px;
+	        letter-spacing: normal;
+        	font-size: rem(13);
+        }
+
+        &:hover {
+            color: $c-black-01;
+            border-color: $c-black-01;
+        }
+    }
+    
+    &__text {
+	    padding: 0 10px;
+		line-height: 25px;
+	    font-size: rem(16); 
+    }
+}

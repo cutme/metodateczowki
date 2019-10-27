@@ -1,0 +1,105 @@
+.o-list {
+
+	li {
+		@extend %rel;
+		
+		&:before {
+			@extend %abs;
+			@extend %abs-after;
+		}
+	}
+	
+	&--arrow,
+	&--plus {
+		li {
+			&:before {
+				@extend %flex;
+				@extend %flex-xy;
+				left: -64px;
+				width: 34px; height: 34px;
+				background-color: $c-violet-01;
+				border-radius: 50%;
+				font: {
+					family: $icomoon;
+					size: rem(20);
+				}
+				color: white;
+			}
+		}
+	}
+
+	&--arrow {
+		li {
+			@extend %lead-medium;
+			border-bottom: 1px solid $c-violet-01;
+			padding: 23px 0;
+			
+			@media ( min-width: $tablet + 1px ) {
+				padding-right: 90px;
+			}
+			
+			&:before {
+				
+				content: "\e903";
+			}
+			
+			&:first-child {
+				border-top: 1px solid $c-violet-01;
+			}
+		}
+	}
+	
+	&--plus {
+		li {
+			border-bottom: 1px solid $c-violet-01;
+			padding: 30px 0;
+			
+			&:before {
+				top: 30px;
+				content: "\e90a";
+			}
+			
+			&:first-child {
+				border-top: 1px solid $c-violet-01;
+			}
+		}
+	}
+	
+	&--check,
+	&--dots {
+		li {
+			padding: 10px 0 10px 30px;
+			line-height: 23px;
+			font-size: rem(16);
+		}
+	}
+	
+	&--check {
+		li {
+			&:before {
+				left: 0; top: 10px;
+				font: {
+					family: $icomoon;
+					size: rem(12);
+				}
+				color: $c-violet-01;
+				content: "\e904";
+			}
+			
+			strong {
+				font-weight: $semibold;
+			}
+		}
+	}
+	
+	&--dots {
+		li {
+			&:before {
+				left: 0; top: 16px;
+				width: 8px; height: 8px;
+				background-color: $c-green-01;
+				border-radius: 50%;
+			}
+		}
+	}
+}

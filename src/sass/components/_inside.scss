@@ -1,0 +1,64 @@
+.c-inside {
+	
+	.o-article {
+		margin-bottom: 80px;
+		
+		@media ( min-width: $smartphone_portrait + px ) {
+			padding-left: 80px;
+			padding-right: 60px;
+		}
+	}
+	
+	.o-cols {
+		@media ( min-width: $tablet_portrait + px ) and ( max-width: $tablet + px ) {
+			display: flex;
+		}
+
+		&__item {
+			@media ( min-width: $tablet_portrait + px ) and ( max-width: $tablet + px ) {
+				width: 50%;
+			}
+
+			&:first-of-type {
+				
+				.c-inside {
+					&__item {
+						@media ( min-width: $smartphone_portrait + px ) {
+							padding-left: 80px;
+						}
+					}
+				}
+			}
+			
+			&:last-of-type {
+				
+			}
+		}
+	}
+	
+	.o-header {
+		max-width: 380px;
+	}
+	
+	.o-picture {
+		margin-bottom: 50px;
+		
+		@media ( min-width: $smartphone_portrait + px ) {
+			margin-bottom: 90px;
+			padding-left: 80px;
+		}
+	}
+	
+	.o-caption {
+		&--vertical {
+			@media ( min-width: $smartphone_portrait + px ) {
+				line-height: 80px;
+			}
+		}
+	}
+	
+	&__item {
+		@extend %rel;
+		margin-bottom: 30px;
+	}	
+}

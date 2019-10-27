@@ -1,0 +1,19 @@
+.c-social {
+	@extend %flex;
+	@extend %flex-y;
+
+	li {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}		
+	}
+	
+	[class^="icon-"] {
+		@extend %flex;
+		@extend %flex-xy;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		font-size: rem(14);		
+	}
+}

@@ -1,0 +1,115 @@
+@keyframes eye {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.c-welcome {
+	box-shadow: 0 5px 50px rgba($c-black-01, .15);
+	
+	.o-cols {
+		width: 100%;
+		margin: 0;
+
+		&__item {
+			height: 100vh;
+			min-height: 780px;
+			padding: 0;
+		
+			&:first-of-type {
+				@extend %rel;
+				@extend %flex;
+			    @extend %flex-column;
+			    @extend %flex-x;
+    
+				background-color: $c-violet-01;
+				//padding: 130px 30px 30px 30px;
+				//padding: 80px 30px 0 30px;
+				padding-top: 80px;
+				text-align: center;
+				overflow: hidden;				
+			}
+			
+			&:last-of-type {
+				@extend %rel;
+				overflow: hidden;
+				
+				@media ( max-width: $tablet + px ) {
+					height: 100vh;
+				}
+			}
+		}
+	}
+	
+	
+	&__header {
+		padding-top: 50px;
+		
+		@media ( min-width: $desktop + 1px ) {
+			padding-top: 100px;
+		}
+	}
+	
+	.arrow,
+	.cta,
+	.logo,
+	.subtitle,
+	.o-lead--big {
+		max-width: 440px;
+		margin: 0 auto;
+		padding: 30px 0;
+		
+		
+	}
+	
+	.arrow {		
+		a {
+			&:hover {
+				.desktop & {
+					color: $c-black-01;
+				}
+			}
+		}
+	}
+	
+	.icon-arrow-long-down {
+		font-size: rem(44);
+		color: white;
+	}
+
+	.logo {
+		max-width: 100%;
+		width: 100%;
+		height: 100%;
+		background: {
+			image: url($path_img + '/logo/metodateczowki-square.svg');
+			repeat: no-repeat;
+			position: center;
+			size: cover;
+		}
+		animation: eye 4s ease-in-out infinite alternate;
+	}
+	
+	.subtitle {
+		max-width: 320px;
+	    line-height: 1.1em;
+		letter-spacing: 1px;
+		text-transform: lowercase;
+		font: {
+			family: $novecento;
+			weight: $regular;
+		}
+    }
+	
+	.o-lead--big {
+		line-height: 1em;
+	    font-size: rem(100);
+	    
+	    @media ( max-width: $smartphone_portrait + px ) {
+	    	font-size: smartphone_portrait(100);
+	    }
+    }   
+}

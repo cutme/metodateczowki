@@ -1,0 +1,17 @@
+.o-header {
+	margin-bottom: 70px;
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		margin-bottom: 40px;
+	}
+
+	&--indent {
+		@media ( min-width: 1441px ) {
+			margin-left: -100px;
+		}
+	}
+   
+    & > .title {		
+		@extend %lead-big;
+	}
+}

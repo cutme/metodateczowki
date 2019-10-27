@@ -1,0 +1,68 @@
+.c-countdown {
+	@extend %rel;
+    @extend %flex;
+	border: {
+		top: 1px solid $c-black-01;
+		bottom: 1px solid $c-black-01;
+	}
+
+    &__item {
+        @extend %rel;
+        width: 33.33%;
+        padding: 80px 0 50px 0;
+        line-height: 1em;
+        letter-spacing: 20px;
+        text-align: center;
+        font: {
+	        family: $editorial;
+	        size: rem(200);
+	        weight: $regular;
+		}
+		
+		&:not(:last-of-type) {
+			border-right: 1px solid $c-black-01;
+		}
+		
+		@media ( max-width: $tablet + px ) {
+			padding-top: 60px;
+			font-size: tablet(200);
+			letter-spacing: 10px;
+		}
+		
+		@media ( max-width: $smartphone_portrait + px ) {
+			padding-top: 40px;
+			letter-spacing: normal;
+		}
+        
+        &:before {
+           @extend %abs; 
+           @extend %abs-after;
+        }
+        
+        &:before {
+            left: 0; bottom: 30px;
+            width: 100%;
+            text-align: center;
+			line-height: 1em;
+			letter-spacing: 1px;
+            font: {
+	            family: $novecento;
+				size: rem(20);
+				weight: $regular;
+			}
+            content: attr(data-title);
+        }
+ 
+        span {
+            font: {
+                size: rem(24);
+                weight: $bold;
+            }
+        }
+    }
+    
+    
+    .o-lead {
+        text-align: center;
+    }
+}

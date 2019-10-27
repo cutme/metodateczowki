@@ -1,0 +1,66 @@
+.c-expect {
+	padding: 80px 0;
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		padding: 40px 0;	
+	}
+	
+	.o-header {
+		max-width: 420px;
+		margin-bottom: 90px;
+	}
+
+	.o-section {
+		background: {
+			image: url(../img/assets/shapes/circles-01.svg);
+			repeat: repeat-x;
+			size: auto 100%;
+		}
+	}
+	
+	.lead {
+		@extend %lead-medium;
+		margin-bottom: .5em;
+	}
+	
+	ul {
+		@extend %flex;
+		@extend %flex-wrap;
+
+		li {
+			margin-bottom: 80px;
+			
+			@media ( min-width: $smartphone_portrait + 1px ) {
+				width: 50%;
+			}
+			
+			@media ( max-width: $smartphone_portrait + px ) {
+				margin-bottom: 40px;
+			}
+
+			&:nth-child(1),
+			&:nth-child(2) {
+
+				@media ( min-width: $tablet_portrait + 1px ) {
+					padding-left: grid(200);
+				}
+				
+			}
+			
+			&:nth-child(3),
+			&:nth-child(4) {
+
+				@media ( min-width: $tablet_portrait + 1px ) {
+					padding-right: grid(200);
+				}
+			}
+			
+			
+			&:nth-child(even) {
+				@media ( min-width: $smartphone_portrait + px ) and ( max-width: $tablet + px ) {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+}

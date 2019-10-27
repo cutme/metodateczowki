@@ -1,0 +1,126 @@
+%abs {
+	position: absolute;
+	z-index: 5;
+}
+
+%abs-after {
+	display: block;
+	content: ' ';
+}
+
+%abs-pseudo {
+	position: absolute;
+	top: 0;
+	display: block;
+	content: ' ';
+}
+
+%anim {
+    transition: all 150ms ease-out;
+}
+
+%antialias {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+%abs-x {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+%abs-y {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+%abs-xy {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%flex {
+    display: flex;
+}
+
+%flex-column {
+    flex-direction: column;
+}
+
+%flex-inline {
+    display: inline-flex;
+}
+
+%flex-shrink {
+    flex-shrink: 0;
+}
+
+%flex-x {
+	justify-content: center;
+}
+
+%flex-y {
+	align-items: center;
+}
+
+%flex-spacebetween {
+	justify-content: space-between;
+}
+
+%flex-end {
+    align-items: flex-end;
+}
+
+%flex-wrap {
+    flex-wrap: wrap;
+}
+
+%flex-xy {
+	justify-content: center;
+	align-items: center;
+}
+
+%lead-big {
+	line-height: 1.2em;
+	font: {
+		family: $editorial;
+		size: rem(60);
+		weight: $regular;
+	}
+	
+	@media ( max-width: $smartphone + px ) {
+		font-size: rem(48);
+	}
+	
+	@media ( max-width: $smartphone_portrait + px ) {
+		font-size: rem(32);
+	}
+}
+
+%lead-medium {
+	line-height: 1.2em;
+	font: {
+		family: $editorial;
+		size: rem(30);
+		weight: $regular;
+	}
+	
+	@media ( max-width: $smartphone + px ) {
+		font-size: rem(24);
+	}
+}
+
+%lead-small {
+	line-height: 1.3em;
+	font: {
+		family: $editorial;
+		size: rem(20);
+		weight: $regular;
+	}
+}
+
+%rel {
+	position: relative;
+	z-index: 1;
+}
