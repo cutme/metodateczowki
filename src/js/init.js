@@ -7,21 +7,21 @@ document.addEventListener('DOMContentLoaded',function() {
         document.documentElement.classList.add(browser.name);
     }
 
-//    const cover = document.getElementById('cover');
+    const cover = document.getElementById('cover');
     
     const init = function() {
-       // document.body.removeAttribute('style');
+        document.body.removeAttribute('style');
         
         setTimeout(function() {
             document.body.classList.add('is-loaded');
         }, 250);
         
 
-/*
+
         cover.addEventListener("transitionend", function() {
             cover.remove();
         }, false);
-*/
+
 
 
         
