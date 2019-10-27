@@ -42,7 +42,7 @@
 					padding-top: 320px;
 				}
 				
-				@media ( min-width: $tablet + 1px ) and ( max-width: $tablet + px ) {
+				@media ( min-width: $smartphone_portrait + 1px ) and ( max-width: $tablet + px ) {
 					padding-left: 140px;
 				}
 			}
