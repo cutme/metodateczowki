@@ -45,6 +45,10 @@
 	.o-lead {
 		&--medium {
 			margin-bottom: 70px;
+			
+			@media ( min-width: $tablet + 1px ) {
+				width: calc(100% + 60px);
+			}
 		}
 	}
 

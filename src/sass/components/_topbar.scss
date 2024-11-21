@@ -22,19 +22,25 @@
 	    white-space: nowrap;
 	    font-family: $editorial;
 	    
-	    @media ( min-width: $base + 1px ) {
+	    @media ( min-width: $smartphone_portrait + 1px ) {
 	    	position: absolute;
 	    	top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 	    }	    
 	    
-	    @media ( max-width: $base + px ) {
-		    margin: 0 0 0 auto;
+	    @media ( min-width: $smartphone_portrait + 1px ) and ( max-width: $base + px ) {
+		   // margin: 0 0 0 auto;
 	    }
 	    
 	    @media ( max-width: $tablet + px ) {
 		    font-size: rem(18);
+		}
+		
+		@media ( max-width: $smartphone_portrait + px ) {
+			position: absolute;
+			left: 0; z-index: -1;
+			width: 100%;
 		}
 	    
 	    & > div {
@@ -66,11 +72,34 @@
     }
     
     .o-btn {
-	    margin-left: 25px;
+	    @media ( max-width: $smartphone_portrait + px ) {
+			margin: 0 auto;
+		}
+		
+	    /*
+@extend %abs;
+	    @extend %abs-xy;
+*/
+    }
+    
+   /*
+ .o-btn {
+	    @media ( min-width: $smartphone_portrait + 1px ) {
+		    margin-left: 25px;
+	    }
 	    
 	    @media ( max-width: $smartphone_portrait + px ) {
+			margin: 0 auto;
+		}
+    }
+*/
+    
+    
+    .o-logo {
+	    @media ( max-width: 670px ) {
 	    	display: none;
 	    }
+
     }
     
     &.is-out {

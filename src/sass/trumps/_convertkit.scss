@@ -1,0 +1,134 @@
+.formkit-form {
+	max-width: 100% !important;
+    width: 100% !important;
+    
+	.fields {
+				
+	    @media ( min-width: $smartphone + 1px ) {
+		    align-items: flex-end;
+			width: calc(100% + 30px);
+			margin: 0 -15px;
+	    }
+	}
+	
+	.formkit-field {
+		@extend %flex;
+	    @extend %flex-wrap;
+
+	    @media ( min-width: $smartphone + 1px ) {
+			flex: 1 !important;
+			padding: 0 15px !important;
+		}
+		
+	    @media ( max-width: $smartphone + px ) {
+		    margin-bottom: 40px !important;
+		}
+	}
+	
+	.formkit-submit {
+		flex: 168px 0 0 !important;
+		transition: all 150ms ease-out !important;
+	    @extend %flex-inline;
+	    @extend %flex-xy;
+	    @extend %rel;
+	    height: 46px !important;
+	    background-color: transparent!important;
+	    white-space: nowrap !important;
+	    border: 1px solid transparent !important;
+	    margin: 0 0 0 15px !important;
+	    padding: 0 30px 2px 30px !important;
+	    letter-spacing: 1px !important;
+	    line-height: 1em !important;
+	    font: {
+		    family: $novecento;
+	        size: rem(16) !important;
+	        weight: $medium !important;
+	    }
+	    text-transform: lowercase !important;
+	    overflow: hidden !important;
+		border: 1px solid $c-black-01 !important;
+		border-radius: 0 !important;
+		color: black !important;
+		
+		@media ( max-width: $smartphone + px ) {
+			margin: 0 auto 20px auto !important;
+		}
+
+		span {
+			transition: none !important;
+			padding: 0 !important;
+			font-weight: $medium !important;
+		}
+		
+		&:hover {
+			span {
+				background-color: transparent !important;
+			}
+
+	        background-color: $c-black-01 !important;
+			border-color: $c-black-01 !important;
+			color: white !important;
+		}
+		
+		
+	}
+
+	.formkit-input {
+		width: 100% !important;
+	    height: 46px !important;
+	    background-color: transparent !important;
+	    border: none !important;
+	    border-radius: 0 !important;
+		border-bottom: 1px solid $c-violet-01 !important;
+		padding: 0 !important;
+		font-size: rem(16) !important;
+	}	
+
+	.formkit-powered-by {
+		padding-left: 20px !important;
+		text-align: left !important;
+		
+		@media ( max-width: $smartphone + px ) {
+			text-align: center !important;
+		}
+	}
+
+	::-webkit-input-placeholder {
+		text-transform: uppercase;
+		font: {
+		    family: $novecento;
+		    size: rem(16);
+		    weight: $medium !important;
+	    }
+		color: $c-violet-01 !important;
+	}
+
+	:-moz-placeholder {
+		text-transform: uppercase;
+		font: {
+		    family: $novecento;
+		    size: rem(16);
+		    weight: $medium !important;
+	    }
+		color: $c-violet-01 !important;
+	}
+	
+	::-moz-placeholder { text-transform: uppercase;
+		font: {
+		    family: $novecento;
+		    size: rem(16);
+		    weight: $medium !important;
+	    }
+		color: $c-violet-01 !important;
+	}
+	
+	:-ms-input-placeholder { text-transform: uppercase;
+		font: {
+		    family: $novecento;
+		    size: rem(16);
+		    weight: $medium !important;
+	    }
+		color: $c-violet-01 !important;
+	}
+}
+

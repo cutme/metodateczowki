@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded',function() {
             cover.remove();
         }, false);
 
-
-
         
         // Anims on inview
         window.animsInit()      

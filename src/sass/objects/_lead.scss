@@ -4,11 +4,11 @@
 	}
 	
 	&--medium {
-		@extend %lead-medium;
+		@extend %lead-medium;   // 30/24
 	}
 	
 	&--small {
-		@extend %lead-small;
+		@extend %lead-small;    // 20
 	}
 	
 	&--mini {

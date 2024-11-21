@@ -17,6 +17,8 @@ require('./js/variants.js');
 require('./js/mobile-detach.js');
 
 
+require("./img/assets/buy/ebook.png");
+require("./img/assets/buy/ebook@2x.png");
 require("./img/assets/buy/cover-1.png");
 require("./img/assets/buy/cover-1@2x.png");
 require("./img/assets/buy/cover-2.png");
